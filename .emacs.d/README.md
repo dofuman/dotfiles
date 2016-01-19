@@ -51,15 +51,18 @@ c/c++-modeの拡張機能.
 	- prefix  
 	`C-c ;`  
 
-- `flymake-google-cpplint`
-google cpp styleの文法チェックをしてくれる．邪魔だと感じたらすぐ消そう．  
+- `flycheck`  
+スペルチェック等
 
-	- 依存パッケージ
-	`sudo easy_install cpplint`
+- `function-args`  
+c/c++用の補完．prefix key : `M-o`  
 
-- `goolge-c-style`
-  googleっぽくしてくれるってさ
-	
+	- `M-o moo-complete`  semantic な補完  
+	- `M-i fa-show` 関数ヒントをポップアップ  
+	- `M-j fa-jump-maybe` ポップアップ状態でオスとジャンプ  
+	- `moo-propose-overide` オーバーライドを suggest  
+	- `moo-propose-variable` 変数を suggest  
+
 - `yasnippet`  
 emacsにIDE的な機能追加．様々なテンプレート(スニペット)をTAB で呼び出せる．
 	- 既存スニペットを挿入する  
@@ -97,3 +100,5 @@ emacsにIDE的な機能追加．様々なテンプレート(スニペット)をT
 - [Yasnippet-snippets](https://github.com/AndreaCrotti/yasnippet-snippets)
 
 - [Emacsの共通設定をgitで管理する](http://keisanbutsuriya.hateblo.jp/entry/2015/02/17/131824)
+
+- [c/c++-mode IDE](http://futurismo.biz/archives/3071)
