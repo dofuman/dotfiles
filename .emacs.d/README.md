@@ -36,34 +36,13 @@ initファイルはinit-loader.elを利用して，分割して管理する．
 |Linux|linux|  
 |emacs nw|nw|  
 
-
-### Version
-
-```bash
-$ emacs --v
-GNU Emacs 24.4
-```
-
-### How to use
-基本的にEmacs 24.4とgit 2.5.1 が必要。
-詳細は/setup_ubuntu/gitflow\_on\_emacs.mdを参照すること。
-
 ### Using package lists
-- `auto-comlete`  
-補完
-
-- `smooth-scroll`  
-その名の通り
-
-- `yatex`  
-TeX用
-
-- `popwin`, `popwin-yatex`  
-`compile`の結果などを`C-g`とかで消せるようになる．
 
 - `elscreen`  
-emacsをタブエディタ化．タブごとにウィンドウ分割が維持できる．
-
+emacsをタブエディタ化．タブごとにウィンドウ分割が維持できる．  
+	- prefix キー  
+	  `C-z`  
+  
 - `smartparent`  
 カッコなどの補完．リージョンに開きカッコを入力すればリージョンの初めと終わりにカッコを補完したりとか．
 
@@ -77,23 +56,35 @@ emacsの中でpdfを綺麗に開ける．検索とかダブルクリックでソ
 デフォルトで入ってる．
 ssh先のファイルをローカルのように扱える．
 
-```bash
-C-x C-f /scp:user@xxx.xxx.com:/home/user/hogehoge/huga.txt
-```
+	```bash
+	C-x C-f /scp:user@xxx.xxx.com:/home/user/hogehoge/huga.txt
+	```
 
-- `web-mode`  
-htmlのシンタックスハイライトとかインデントとかフォールディングとか．
+- `yasnippet`  
+emacsにIDE的な機能追加．様々なテンプレート(スニペット)をTAB で呼び出せる．
+	- 既存スニペットを挿入する  
+	  `C-x i i`  
 
-### Required
-- Ricty（フォント）
+	- 新規スニペットを作成するバッファを用意する．  
+	  `C-x i n`  
+
+	- 既存スニペットを閲覧・編集する  
+	  `C-x i v`  
+
+### Required  
+ - emacs 24.4.1  
+ - git 2.5.1  
+
+`M-x emacs-version`でemacsのversion確認．  
+`git --version`でgitのversion確認 ．  
 
 ### TODO
 - forward search( yatex + pdf-tools )の設定．
 - 環境ごとに文字の大きさを設定する．
 
 ### Note
-- Cocoaだとダメっぽい. Portsでインストールしたemacsなら可能.
-- package lists にはおそらく抜けがある．
+- IDE機能を順次追加．基本的にemacsの起動は遅くなるので，emacsを常駐させるのが望ましい．  
+
 
 ## 参考サイト
 
