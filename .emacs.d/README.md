@@ -51,6 +51,15 @@ c/c++-modeの拡張機能.
 	- prefix  
 	`C-c ;`  
 
+- `flymake-google-cpplint`
+google cpp styleの文法チェックをしてくれる．邪魔だと感じたらすぐ消そう．  
+
+	- 依存パッケージ
+	`sudo easy_install cpplint`
+
+- `goolge-c-style`
+  googleっぽくしてくれるってさ
+	
 - `yasnippet`  
 emacsにIDE的な機能追加．様々なテンプレート(スニペット)をTAB で呼び出せる．
 	- 既存スニペットを挿入する  
