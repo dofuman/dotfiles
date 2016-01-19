@@ -4,29 +4,14 @@
 ### init.el
 
 initファイルはinit-loader.elを利用して，分割して管理する．
-`~/.emacs.d/site-lisp/`以下に`init-loader.el`をおいて，`~/.emacs.d/init.el`に
+`~/.emacs.d/init.el`に`~/.emacs.d/inits`に設定ファイルを置く設定(defaultでも)にしている．
+これでディレクトリにおいてある設定ファイルを読み込むことができる．
 
-```el
-
-;; ~/.emacs.d/site-lisp 以下全部読み込み
-(let ((default-directory (expand-file-name "~/.emacs.d/site-lisp")))
-  (add-to-list 'load-path default-directory)
-  (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
-      (normal-top-level-add-subdirs-to-load-path)))
-
-(require 'init-loader)
-(setq init-loader-show-log-after-init nil)
-(init-loader-load "~/.emacs.d/inits")
-
-```
-
-を記述してある．これで`~/.emacs.d/inits`ディレクトリにおいてある設定ファイルを読み込むことができる．
-
-`~/.emacs.d/inits`ディレクトリ以下のファイルは以下の設定に従って作成する．
+`~/.emacs.d/inits`ディレクトリのファイルは以下の設定に従って作成する．
 
 - 環境に依存しない設定はファイル名の最初に2桁の数字をつける．
 
-	- 番号は優先度で00がn最初位読み込まれ，99が最後に読み込まれる． 
+	- 番号は優先度で00が最初に読み込まれ，99が最後に読み込まれる． 
 	- 同じ数字をつけても良い．
 	
 - 環境依存の設定はそれぞれの環境のプレフィックスをファイル名の最初につける．
