@@ -45,6 +45,12 @@ ssh先のファイルをローカルのように扱える．
 	C-x C-f /scp:user@xxx.xxx.com:/home/user/hogehoge/huga.txt
 	```
 
+- `iedit`   
+c/c++-modeの拡張機能.
+
+	- prefix  
+	`C-c ;`  
+
 - `yasnippet`  
 emacsにIDE的な機能追加．様々なテンプレート(スニペット)をTAB で呼び出せる．
 	- 既存スニペットを挿入する  

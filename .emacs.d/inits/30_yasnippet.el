@@ -16,3 +16,6 @@
 (define-key yas-minor-mode-map (kbd "C-x i v") 'yas-visit-snippet-file)
  
 (yas-global-mode 1)
+
+(defalias 'yas/get-snippet-tables 'yas--get-snippet-tables)
+(defalias 'yas/table-hash 'yas--table-hash)
