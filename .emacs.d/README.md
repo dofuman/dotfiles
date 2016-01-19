@@ -100,3 +100,7 @@ htmlのシンタックスハイライトとかインデントとかフォール�
 - [init-loader.elとpackage.elを導入して快適emacsライフ](http://qiita.com/catatsuy/items/5f1cd86e2522fd3384a0)
 
 - [計算物理屋の研究備忘録 ](http://keisanbutsuriya.hateblo.jp/entry/2015/02/17/131824)
+
+- [Emacsにyasnippetを導入する](http://vdeep.net/emacs-yasnippet)
+
+- [Yasnippet-snippets](https://github.com/AndreaCrotti/yasnippet-snippets)
