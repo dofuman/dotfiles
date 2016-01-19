@@ -80,3 +80,5 @@ emacsにIDE的な機能追加．様々なテンプレート(スニペット)をT
 - [Emacsにyasnippetを導入する](http://vdeep.net/emacs-yasnippet)
 
 - [Yasnippet-snippets](https://github.com/AndreaCrotti/yasnippet-snippets)
+
+- [Emacsの共通設定をgitで管理する](http://keisanbutsuriya.hateblo.jp/entry/2015/02/17/131824)
