@@ -102,3 +102,5 @@ emacsにIDE的な機能追加．様々なテンプレート(スニペット)をT
 - [Emacsの共通設定をgitで管理する](http://keisanbutsuriya.hateblo.jp/entry/2015/02/17/131824)
 
 - [c/c++-mode IDE](http://futurismo.biz/archives/3071)
+
+- [helm.el config](http://d.hatena.ne.jp/a_bicky/20151123/1448285411)
