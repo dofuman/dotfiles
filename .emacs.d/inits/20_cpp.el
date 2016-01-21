@@ -11,6 +11,7 @@
             (setq c-basic-offset 2)      ;; indent は 2 スペース
             ))
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
+
 ;;flycheck-mode(error check)
 (require 'flycheck)
 (add-hook 'c-mode-common-hook 'flycheck-mode)

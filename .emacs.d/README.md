@@ -78,18 +78,6 @@ c/c++-modeの拡張機能.
 	- prefix  
 	`C-c ;`  
 
-- `flycheck`  
-スペルチェック等
-
-- `function-args`  
-c/c++用の補完．prefix key : `M-o`  
-
-	- `M-o moo-complete`  semantic な補完  
-	- `M-i fa-show` 関数ヒントをポップアップ  
-	- `M-j fa-jump-maybe` ポップアップ状態でオスとジャンプ  
-	- `moo-propose-overide` オーバーライドを suggest  
-	- `moo-propose-variable` 変数を suggest  
-
 - `yasnippet`  
 emacsにIDE的な機能追加．様々なテンプレート(スニペット)をTAB で呼び出せる．
 	- 既存スニペットを挿入する  
