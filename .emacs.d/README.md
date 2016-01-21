@@ -44,6 +44,33 @@ ssh先のファイルをローカルのように扱える．
 	```bash
 	C-x C-f /scp:user@xxx.xxx.com:/home/user/hogehoge/huga.txt
 	```
+### C/C++ - mode
+
+- `cc-mode`
+  c/c++/objc/javaなどの設定をすべてできるメジャーモード
+
+- `flycheck`
+gcc, clang, cppcheckがdefaultのチェッカーとして使われる．
+
+checkerの変更は`M-x flycheck-select-checker`
+helmからのアクセスは`M-x helm-flycheck`
+	- `flycheck` はmakefileに依存せずに構文チェックする関係上，standardなheader file以外は，扱えない．
+	そこで，各projectのrootに`.dir-locates.el`を配置し，そこにプロジェクトで使用するlibrary pathを記述すれば良い．
+
+```elisp
+;;; Directory Local Variables
+;;; See Info node `(emacs) Directory Variables' for more information.
+
+((c-mode .
+         ( (flycheck-gcc-include-path . ("/local/include/dir/1" "/local/include/dir/2") ) )
+         ))
+```
+
+- `symantic`
+buildinされてる．.cppファイルを開いたバッファで`M-x symantic-mode`を
+実行すれば，コードの解析をしてくれる．`(semantic-mode 1)`で常駐．
+
+- ``
 
 - `iedit`   
 c/c++-modeの拡張機能.

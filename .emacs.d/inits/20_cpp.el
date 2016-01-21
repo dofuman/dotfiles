@@ -1,24 +1,19 @@
 ;;
 ;;; C++ style
 ;;
-(add-hook 'c++-mode-hook
-          '(lambda()
-             (c-set-style "stroustrup")
-             (setq indent-tabs-mode nil)     ;; インデントは空白文字で行う（TABコードを空白に変換）
-	     (setq tab-width 4)
-             (c-set-offset 'innamespace 0)   ;;;namespace {}の中はインデントしない
-             (c-set-offset 'arglist-close 0) ;;;関数の引数リストの閉じ括弧はインデントしない
-             )
-	  (semantic-mode 1)
-	  ;;; (setq ac-sources (append ac-sources '(ac-source-semantic)))
-	  (setq ac-sources (append ac-sources '(ac-source-semantic-raw)))
-	  )
-
-;; .hファイルをC++-modeで開く
-(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 (require 'cc-mode)
-(require 'flycheck)
 
+;; c-mode-common-hook は C/C++ の設定
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            (setq c-default-style "k&r") ;; カーニハン・リッチースタイル
+            (setq indent-tabs-mode nil)  ;; タブは利用しない
+            (setq c-basic-offset 2)      ;; indent は 2 スペース
+            ))
+(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
+;;flycheck-mode(error check)
+(require 'flycheck)
+(add-hook 'c-mode-common-hook 'flycheck-mode)
 (flycheck-define-checker c/c++
   "A C/C++ checker using g++."
   :command ("g++" "-Wall" "-Wextra" source)
@@ -29,30 +24,37 @@
                            (file-name) ":" line ":" column ":" " 警告: " (message)
                            line-end))
   :modes (c-mode c++-mode))
-(flycheck-mode t);;flycheckを自動で有効にする
-
-;;function-args
-(require 'function-args)
-(fa-config-default)
-(define-key function-args-mode-map (kbd "M-o") nil)
-(define-key c-mode-map (kbd "C-M-:") 'moo-complete)
-(define-key c++-mode-map (kbd "C-M-:") 'moo-complete)
-   
-(custom-set-faces
- '(fa-face-hint ((t (:background "#3f3f3f" :foreground "#ffffff"))))
- '(fa-face-hint-bold ((t (:background "#3f3f3f" :weight bold))))
- '(fa-face-semi ((t (:background "#3f3f3f" :foreground "#ffffff" :weight bold))))
- '(fa-face-type ((t (:inherit (quote font-lock-type-face) :background "#3f3f3f"))))
- '(fa-face-type-bold ((t (:inherit (quote font-lock-type-face) :background "#999999" :bold t)))))
 
 
-;; auto complete c header's ac config
-(require 'auto-complete-c-headers)
-(add-hook 'c++-mode-hook '(setq ac-sources (append ac-sources '(ac-source-c-headers))))
-(add-hook 'c-mode-hook '(setq ac-sources (apanpend ac-sources '(ac-source-c-headers))))
-
-;; iedit mode key config
+;; ;; iedit mode key config
+;; 同じ変数をまとめて修正するときに使う．
 (define-key global-map (kbd "C-c ;") 'iedit-mode)
+
+;;日本語対応させてるらしいけどエラーメッセージが別バッファで開くのが
+;;うっとおしいのでコメントアウト
+;; (defmacro flycheck-define-clike-checker (name command modes)
+;;   `(flycheck-define-checker ,(intern (format "%s" name))
+;;      ,(format "A %s checker using %s" name (car command))
+;;      :command (,@command source-inplace)
+;;      :error-patterns
+;;      ((warning line-start (file-name) ":" line ":" column ": 警告:" (message) line-end)
+;;       (error line-start (file-name) ":" line ":" column ": エラー:" (message) line-end))
+;;      :modes ',modes))
+;; (flycheck-define-clike-checker c-gcc-ja
+;;                    ("gcc" "-fsyntax-only" "-Wall" "-Wextra")
+;;                    c-mode)
+;; (add-to-list 'flycheck-checkers 'c-gcc-ja)
+;; (flycheck-define-clike-checker c++-g++-ja
+;;                    ("g++" "-fsyntax-only" "-Wall" "-Wextra" "-std=c++11")
+;;                    c++-mode)
+;; (add-to-list 'flycheck-checkers 'c++-g++-ja)
+
+;; header fileを acしても割としょうもないと思ったのと，補完失敗してるぽいので，コメントアウト
+;; ;; auto complete c header's ac config
+;; (require 'auto-complete-c-headers)
+;; (add-hook 'c++-mode-hook '(setq ac-sources (append ac-sources '(ac-source-c-headers))))
+;; (add-hook 'c-mode-hook '(setq ac-sources (apanpend ac-sources '(ac-source-c-headers))))
+
 
 
 
