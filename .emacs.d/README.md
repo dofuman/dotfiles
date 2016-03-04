@@ -1,13 +1,20 @@
 # emacs config
 ***
 
+### Required  
+一部パッケージの依存関係で，以下の要件を満たす必要があります
+ - emacs 24.4.1 later  
+ - git 2.5.1 later  
+
+`M-x emacs-version`でemacsのversion確認．  
+`git --version`でgitのversion確認 ．  
+
 ### init.el
 
 initファイルはinit-loader.elを利用して，分割して管理する．
-`~/.emacs.d/init.el`に`~/.emacs.d/inits`に設定ファイルを置く設定(defaultでも)にしている．
-これでディレクトリにおいてある設定ファイルを読み込むことができる．
+`.emacs.d/inits/`以下に各種設定用ファイルを配置する．
 
-`~/.emacs.d/inits`ディレクトリのファイルは以下の設定に従って作成する．
+`~/.emacs.d/inits`ディレクトリのファイル名は以下の規則に従う．
 
 - 環境に依存しない設定はファイル名の最初に2桁の数字をつける．
 
@@ -24,18 +31,20 @@ initファイルはinit-loader.elを利用して，分割して管理する．
 ### Using package lists
 
 - `elscreen`  
-emacsをタブエディタ化．タブごとにウィンドウ分割が維持できる．  
+emacsをタブエディタ化．タブごとにウィンドウ分割が維持できる．`09_elscreen.el`
+
 	- prefix キー  
 	  `C-z`  
   
 - `smartparent`  
 カッコなどの補完．リージョンに開きカッコを入力すればリージョンの初めと終わりにカッコを補完したりとか．
+他の補完機能と競合することもある．
 
 - `gnuplot-mode`  
-プロットファイルのハイライトとか，実行とか．
+プロットファイルのハイライトとか，実行とか．`20_gnuplot.cl`
 
 - `pdf-tools`  
-emacsの中でpdfを綺麗に開ける．検索とかダブルクリックでソースに移動とか．
+emacsの中でpdfを綺麗に開ける．検索とかダブルクリックでソースに移動とか．`20_pdf.el`
 
 - `tramp`  
 デフォルトで入ってる．
@@ -46,6 +55,8 @@ ssh先のファイルをローカルのように扱える．
 	```
 ### C/C++ - mode
 
+`20_cpp.el`に設定を記述．
+
 - `cc-mode`
   c/c++/objc/javaなどの設定をすべてできるメジャーモード
 
@@ -54,8 +65,7 @@ gcc, clang, cppcheckがdefaultのチェッカーとして使われる．
 
 checkerの変更は`M-x flycheck-select-checker`
 helmからのアクセスは`M-x helm-flycheck`
-	- `flycheck` はmakefileに依存せずに構文チェックする関係上，standardなheader file以外は，扱えない．
-	そこで，各projectのrootに`.dir-locates.el`を配置し，そこにプロジェクトで使用するlibrary pathを記述すれば良い．
+	- `flycheck` はプロジェクトごとに設定されたmakefileを使わずにに構文チェックする関係上，standardなheader file以外は，扱えない．そこで，flycheckでは，各projectのrootに`.dir-locates.el`を配置し，そこにプロジェクトで使用するlibrary pathを記述することで，headerfileを正しく認識してくれる．
 
 ```elisp
 ;;; Directory Local Variables
@@ -89,19 +99,12 @@ emacsにIDE的な機能追加．様々なテンプレート(スニペット)をT
 	- 既存スニペットを閲覧・編集する  
 	  `C-x i v`  
 
-### Required  
- - emacs 24.4.1  
- - git 2.5.1  
-
-`M-x emacs-version`でemacsのversion確認．  
-`git --version`でgitのversion確認 ．  
-
 ### TODO
 - forward search( yatex + pdf-tools )の設定．
 - 環境ごとに文字の大きさを設定する．
 
 ### Note
-- IDE機能を順次追加．基本的にemacsの起動は遅くなるので，emacsを常駐させるのが望ましい．  
+- IDE機能を順次追加．
 
 
 ## 参考サイト
