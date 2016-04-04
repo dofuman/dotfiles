@@ -28,3 +28,4 @@ ac-comphist.dat
 wget-log
 /.python-environments/*
 /.emacs.d/.python-environments/default/bin/activate
+/.emacs.d/.python-environments/default/bin/activate.csh
