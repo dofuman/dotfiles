@@ -27,3 +27,4 @@ ac-comphist.dat
 /semanticdb
 wget-log
 /.python-environments/*
+/.emacs.d/.python-environments/default/bin/activate
