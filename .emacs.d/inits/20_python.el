@@ -12,4 +12,6 @@
 (add-hook 'python-mode-hook
   (lambda ()
     (setq imenu-create-index-function 'python-imenu-create-index)))
-
+;; jedi
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:complete-on-dot t)
