@@ -1,7 +1,6 @@
 ;;
 ;; etc config
 ;;
-
 ; 行番号の表示
 (require 'linum)
 (global-linum-mode t)

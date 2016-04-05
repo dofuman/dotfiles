@@ -19,5 +19,8 @@
 (setq ac-auto-show-menu 0.05) ;;;補完メニューを表示
 (setq ac-quick-help-delay 0.5) ;;;クイックヘルプを表示
 (setq ac-ignore-caes nil) ;;;大文字と小文字を区別する
-
-
+(add-to-list 'ac-modes 'text-mode)         ;; text-modeでも自動的に有効にする
+(add-to-list 'ac-modes 'fundamental-mode)  ;; fundamental-mode
+(add-to-list 'ac-modes 'org-mode)
+(add-to-list 'ac-modes 'yatex-mode)
+(setq popup-use-optimized-column-computation t)
