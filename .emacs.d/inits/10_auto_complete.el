@@ -5,6 +5,7 @@
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d//ac-dict")
 (ac-config-default)
+(re
 ;; 情報源として
     ;; * ac-source-filename
     ;; * ac-source-words-in-same-mode-buffers
