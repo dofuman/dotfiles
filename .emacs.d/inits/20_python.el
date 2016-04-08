@@ -1,17 +1,16 @@
-;;python-mode conxgfig
+;;python-mode config
 
-;; indent 
+(require 'jedi-core)
+(setq jedi:complete-on-dot t)
+(setq jedi:use-shortcuts t)
+(add-hook 'python-mode-hook 'jedi:setup)
 (add-hook 'python-mode-hook
                    '(lambda ()
                         (setq indent-tabs-mode nil)
                         (setq indent-level 4)
                         (setq python-indent 4)
                         (setq tab-width 4)))
-;; imenu
-(semantic-mode 1) 
 (add-hook 'python-mode-hook
-  (lambda ()
-    (setq imenu-create-index-function 'python-imenu-create-index)))
-;; jedi
-(add-hook 'python-mode-hook 'jedi:setup)
-(setq jedi:complete-on-dot t)
+	  (lambda ()
+	    (add-to-list 'company-backends '(company-jedi company-dabbrev company-yasnippet))))
+

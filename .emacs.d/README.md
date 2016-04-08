@@ -6,7 +6,7 @@
  - emacs 24.4.1 later  
  - git 2.5.1 later  
 
-`M-x emacs-version`でemacsのversion確認．  
+emacs上で `M-x emacs-version`またはターミナルから`emacs --version`でemacsのversion確認．  
 `git --version`でgitのversion確認 ．  
 
 ### init.el
