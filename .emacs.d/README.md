@@ -1,13 +1,32 @@
 # emacs config
 ***
 
-### Required  
+### Dependencies  
 一部パッケージの依存関係で，以下の要件を満たす必要があります
  - emacs 24.4.1 later  
  - git 2.5.1 later  
-
 emacs上で `M-x emacs-version`またはターミナルから`emacs --version`でemacsのversion確認．  
 `git --version`でgitのversion確認 ．  
+
+また，次のパッケージがインストールされている必要があります．
+
+ - cmigemo  
+	`sudo apt-get install cmigemo`  
+
+ - jedi  
+   ```sh
+   sudo apt-get install python-pip  
+   sudo pip install virtualenv  
+   ```
+ - markdown  
+   `sudo apt-get install markdown`  
+   
+emacs上で実行  
+
+```emacs
+M-x jedi:install-server
+M-x irony-server-install
+```
 
 ### init.el
 
