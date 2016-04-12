@@ -10,8 +10,12 @@ emacs上で `M-x emacs-version`またはターミナルから`emacs --version`�
 
 また，次のパッケージがインストールされている必要があります．
 
- - cmigemo  
-	`sudo apt-get install cmigemo`  
+ - migemo  
+	```sh
+	sudo apt-get install cmigemo  
+	# emacs起動時にrubyがないと言われたら
+	sudo apt-get install ruby  
+	```	
 
  - jedi  
    ```sh

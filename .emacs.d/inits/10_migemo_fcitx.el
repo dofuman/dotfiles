@@ -13,5 +13,5 @@
   (setq migemo-dictionary "/usr/share/cmigemo/utf-8/migemo-dict")
 )
 
-(require 'fcitx)
-(fcitx-aggressive-setup)
+;;(require 'fcitx)
+;;(fcitx-aggressive-setup)
