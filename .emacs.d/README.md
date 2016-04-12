@@ -15,6 +15,8 @@ emacs上で `M-x emacs-version`またはターミナルから`emacs --version`�
 	sudo apt-get install cmigemo  
 	# emacs起動時にrubyがないと言われたら
 	sudo apt-get install ruby  
+	#もしくは
+	sudo apt-get install ruby-dev
 	```	
 
  - jedi  
@@ -24,8 +26,10 @@ emacs上で `M-x emacs-version`またはターミナルから`emacs --version`�
    ```
  - markdown  
    `sudo apt-get install markdown`  
+ 
  - irony	   
-   `sudo apt-get install`
+   `sudo apt-get install libclang-dev`
+   
 emacs上で実行  
 
 ```emacs
