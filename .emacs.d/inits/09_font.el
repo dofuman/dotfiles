@@ -8,4 +8,4 @@
  ;;
  '(default ((t (:family "Ricty for Powerline" :foundry "unknown" :slant normal :weight normal :height 128 :width normal))))
  '(whitespace-tab ((t (:foreground "dark gray" :underline t :weight bold)))))
- )
+
