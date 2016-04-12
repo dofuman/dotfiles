@@ -78,3 +78,12 @@
 ;; [DEL]キーもしくは[C-h]に当てられているdelete-backward-charにadviceをかけられて削除するたびにフリーズする．これを無効化.
 (ad-disable-advice 'delete-backward-char 'before 'sp-delete-pair-advice)
 (ad-activate 'delete-backward-char)
+
+;; directoryを指定してコマンド実行？
+(defun in-directory (dir)
+  "Runs execute-extended-command with default-directory set to the given directory."
+  (interactive "DIn directory: ")
+  (let ((default-directory dir))
+	(call-interactively 'execute-extended-command)))
+
+(global-set-key (kbd "M-X") 'in-directory)
