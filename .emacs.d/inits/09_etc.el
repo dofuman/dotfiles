@@ -6,6 +6,8 @@
 (global-linum-mode t)
 ;; (setq linum-format "%4d")
 
+;; coding system
+(prefer-coding-system 'utf-8)
 ;; ;バッファ自動再読み込み
 (global-auto-revert-mode 1)
 
@@ -18,9 +20,12 @@
 
 ;; ; バッファの終わりでのnewlineを禁止する
 (setq next-line-add-newlines nil)
+
 ;常に最終行に一行追加する(自動的に)
 (setq require-final-newline nil)
 
+;;リージョンに上書き
+(delete-selection-mode t)
 
 ;; ;ファイルが #! から始まる場合， +x (実行権限) を付けて保存する
 (add-hook 'after-save-hook

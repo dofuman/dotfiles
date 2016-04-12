@@ -39,7 +39,7 @@
   ファイルバージョン管理下(git?)のディレクトリをプロジェクトとして管理できるらしい
 
 - use-package.el
-  elispのrequire宣言を楽にしてくれる．
+  elispのrequire宣言を楽にしてくれる．修正めんどいので却下．気が向いたらいつか．
   参考URL:http://posaune.hatenablog.com/entry/2014/06/17/221041
 
 - zlc.el
