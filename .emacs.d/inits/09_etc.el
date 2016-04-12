@@ -49,6 +49,18 @@
 ;; ;;; スタートアップ時のエコー領域メッセージの非表示
 (setq inhibit-startup-echo-area-message -1)
 
+;; eshellに色を付けるらしい？
+;;
+;; compilation config
+;;
+(add-hook 'compilation-mode-hook 'ansi-color-for-comint-mode-on)
+(add-hook 'compilation-filter-hook
+          '(lambda ()
+             (let ((start-marker (make-marker))
+                   (end-marker (process-mark (get-buffer-process (current-buffer)))))
+               (set-marker start-marker (point-min))
+               (ansi-color-apply-on-region start-marker end-marker))))
+
 ;;選択範囲の行と列を表示する
 (line-number-mode t)
 (column-number-mode t)

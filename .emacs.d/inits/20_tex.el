@@ -8,7 +8,12 @@
 (setq YaTeX-inhibit-prefix-letter t)
 (setq YaTeX-kanji-code nil)
 (setq YaTeX-latex-message-code 'utf-8)
-
+;; Yatexの自動改行をなしにする．
+(add-hook 'yatex-mode-hook
+	  '(lambda ()
+	     (auto-fill-mode -1)
+	     (auto-complete-mode t)
+	     ))
 ;;;(setq tex-command "latexmk -pvc")  ;;保存したら自動で再コンパイル
 (setq tex-command "latexmk")
 (setq dvi2-command "evince")
