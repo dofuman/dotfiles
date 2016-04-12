@@ -42,6 +42,6 @@
   elispのrequire宣言を楽にしてくれる．修正めんどいので却下．気が向いたらいつか．
   参考URL:http://posaune.hatenablog.com/entry/2014/06/17/221041
 
-- zlc.el
+- zlc.el 
   TABの補完候補の選択を楽にしてくれる
   参考URL:http://d.hatena.ne.jp/mooz/20101003/p1

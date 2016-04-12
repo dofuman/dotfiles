@@ -62,7 +62,7 @@
 	  pattern)))
 
 
-(unless helm-source-buffers-list
+(unless helm-source-buffers-list 
   (setq helm-source-buffers-list
 		(helm-make-source "Buffers" 'helm-source-buffers)))
 (add-to-list 'helm-source-buffers-list
