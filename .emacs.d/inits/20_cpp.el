@@ -26,36 +26,34 @@
                            line-end))
   :modes (c-mode c++-mode))
 
+;;
+;; irony-mode
+;;
+(require 'irony)
+(add-hook 'c++-mode-hook 'irony-mode)
+(add-hook 'c-mode-hook 'irony-mode)
+(add-hook 'c-mode-common-hook 'irony-mode)
 
-;; ;; iedit mode key config
-;; 同じ変数をまとめて修正するときに使う．
-(define-key global-map (kbd "C-c ;") 'iedit-mode)
-
-;;日本語対応させてるらしいけどエラーメッセージが別バッファで開くのが
-;;うっとおしいのでコメントアウト
-;; (defmacro flycheck-define-clike-checker (name command modes)
-;;   `(flycheck-define-checker ,(intern (format "%s" name))
-;;      ,(format "A %s checker using %s" name (car command))
-;;      :command (,@command source-inplace)
-;;      :error-patterns
-;;      ((warning line-start (file-name) ":" line ":" column ": 警告:" (message) line-end)
-;;       (error line-start (file-name) ":" line ":" column ": エラー:" (message) line-end))
-;;      :modes ',modes))
-;; (flycheck-define-clike-checker c-gcc-ja
-;;                    ("gcc" "-fsyntax-only" "-Wall" "-Wextra")
-;;                    c-mode)
-;; (add-to-list 'flycheck-checkers 'c-gcc-ja)
-;; (flycheck-define-clike-checker c++-g++-ja
-;;                    ("g++" "-fsyntax-only" "-Wall" "-Wextra" "-std=c++11")
-;;                    c++-mode)
-;; (add-to-list 'flycheck-checkers 'c++-g++-ja)
-
-;; header fileを acしても割としょうもないと思ったのと，補完失敗してるぽいので，コメントアウト
-;; ;; auto complete c header's ac config
-;; (require 'auto-complete-c-headers)
-;; (add-hook 'c++-mode-hook '(setq ac-sources (append ac-sources '(ac-source-c-headers))))
-;; (add-hook 'c-mode-hook '(setq ac-sources (apanpend ac-sources '(ac-source-c-headers))))
-
+;; replace the `completion-at-point' and `complete-symbol' bindings in
+;; irony-mode's buffers by irony-mode's function
+(defun my-irony-mode-hook ()
+(define-key irony-mode-map [remap completion-at-point]
+  'irony-completion-at-point-async)
+(define-key irony-mode-map [remap complete-symbol]
+  'irony-completion-at-point-async))
+(add-hook 'irony-mode-hook 'my-irony-mode-hook)
+(add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
+(add-hook 'irony-mode-hook
+	  (lambda ()
+	    (add-to-list 'company-backends '(company-irony company-dabbrev company-yasnippet))))
+;; (eval-after-load 'company
+;; '(add-to-list 'company-backends 'company-irony))
+;; (optional) adds CC special commands to `company-begin-commands' in order to
+;; trigger completion at interesting places, such as after scope operator
+;;     std::|
+(add-hook 'irony-mode-hook 'company-irony-setup-begin-commands)
+;; irony-eldoc
+(add-hook 'irony-mode-hook 'irony-eldoc)
 
 
 
