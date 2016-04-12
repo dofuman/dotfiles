@@ -24,7 +24,8 @@ emacs上で `M-x emacs-version`またはターミナルから`emacs --version`�
    ```
  - markdown  
    `sudo apt-get install markdown`  
-   
+ - irony	   
+   `sudo apt-get install`
 emacs上で実行  
 
 ```emacs
