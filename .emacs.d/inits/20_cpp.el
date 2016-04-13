@@ -25,7 +25,9 @@
                            (file-name) ":" line ":" column ":" " 警告: " (message)
                            line-end))
   :modes (c-mode c++-mode))
-
+(add-hook 'c++-mode-hook (lambda () (setq flycheck-clang-language-standard "c++11")))
+(eval-after-load 'flycheck
+  '(add-hook 'flycheck-mode-hook #'flycheck-irony-setup))
 ;;
 ;; irony-mode
 ;;
@@ -56,4 +58,7 @@
 (add-hook 'irony-mode-hook 'irony-eldoc)
 
 
+;; helm-flycheck
+(eval-after-load 'flycheck
+   '(define-key flycheck-mode-map (kbd "C-c ! h") 'helm-flycheck))
 
