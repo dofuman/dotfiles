@@ -146,8 +146,8 @@ Python-mode
 TODO
 ===
 
-- pythonのflycheckの設定
-- ソースツリーを表示したければ何かしら追加する．
+- add flycheck direx for python
+- add projectile helm-projectile iedit for c++   
 
 ## 参考サイト
 
