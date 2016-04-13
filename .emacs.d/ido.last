@@ -1,0 +1,37 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/" . "sinji/")
+ ("/" . "home/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/sinji/gitbucket/other_dotfiles/dotfiles/.emacs.d/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "Cask"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/sinji/gitbucket/" (22276 43283 65751 745000) "dotfiles/" "other_dotfiles/" "paper_repo/" "ROS_WS/" "setup_ubuntu/" "PCM/" "chainer/" "Program/" "wget-log" "libfreenect2/" "HOWTO/" "PCL/" "../" "./")
+
+ ("/home/sinji/gitbucket/other_dotfiles/" (22276 43303 641751 272000) "dotfiles/" "../" "./")
+
+ ("/home/sinji/gitbucket/other_dotfiles/dotfiles/" (22276 43305 537751 228000) "deploy.sh" "README.md" ".zshrc" "install.sh" ".gitconfig" ".emacs.d/" ".git/" ".latexmkrc" ".gitignore" "../" "./")
+
+ ("/home/sinji/gitbucket/other_dotfiles/dotfiles/.emacs.d/" (22276 44672 545719 750000) "auto-save-list/" ".python-environments/" "README.md" ".cask/" "init.el" "snippets/" "Cask" ".#init.el" ".gitignore" "../" "./")
+
+ ("/home/" (21842 12998 761992 196000) "sinji/" "../" "./")
+
+ ("/home/sinji/" (22276 44109 741732 709000) ".gnome/" ".vmware/" ".gnome2_private/" "wget-log.1" "Documents/" ".wine/" ".mozilla/" ".gnupg/" "Public/" ".recentf" "matlab/" "markdown-previewer-master/" ".Rhistory" "doc/" ".gconf/" "data/" ".rviz/" ".colorgccrc" "missfont.log" ".java/" "Videos/" ".dbus/" ".ipython/" ".matlab/" ".local/" ".shutter/" ".subversion/" "samples/" ".cupy/" ".config/" ".bash_logout" "oracle_vbox.asc" ".gksu.lock" ".synaptic/" ".gnome2/" ".swt/" ".bashrc~" ".texlive2014/" ".virtualenvs/" ".xsession-errors" ".pki/" ".gvfs/" ".ccache/" ".cache/" "Music/" ".cask/" ".macromedia/" ".rpmdb/" ".mozc/" ".compiz/" ".minecraft/" ".gitconfig" "setup_files/" ".watershed/" ".ssh/" "intel/" ".dmrc" ".kde/" ".gnuplot-wxt" "Dropbox/" "Downloads/" "R/" "VirtualBox VMs/" "home_ex/" "chainer/" "caffe/" ".sdformat/" ".xsession-errors.old" "wget-log" ".bash_history" ".ICEauthority" ".emacs.d/" ".rstudio-desktop/" "anaconda/" ".gem/" ".gazebo/" "Desktop/" ".android/" ".continuum/" ".npm/" "Position.obj" ".dir-locals.el" ".nv/" ".bashrc-anaconda.bak" ".ros/" "freenect2/" ".Xauthority" "bin/" "Comic/" "kinect2_ws/" ".latexmkrc" "Pictures/" ".thunderbird/" ".adobe/" ".dropbox/" ".Tgif/" ".gnuplot_history" ".profile" ".yatexrc" ".bashrc" "gitbucket/" ".lesshst" "../" ".dropbox-dist/" "./" ".gitbucket/")
+
+ ("/home/sinji/.emacs.d/" (22276 44174 809731 211000) "auto-save-list/" "README.md" ".cask/" "init.el" "snippets/" "Cask" ".gitignore" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
