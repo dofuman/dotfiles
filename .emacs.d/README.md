@@ -137,6 +137,9 @@ Python-mode
 - jedi  
   python向けのcode completion機能を提供  
 
+- yasnippet  
+  c/c++と同様
+
 - flycheck  
   設定はまだ
 
@@ -144,17 +147,7 @@ TODO
 ===
 
 - pythonのflycheckの設定
-- ソースツリーを表示したければ何かしら追加する．- `yasnippet`  
-emacsにIDE的な機能追加．様々なテンプレート(スニペット)をTAB で呼び出せる．
-	- 既存スニペットを挿入する  
-	  `C-x i i`  
-
-	- 新規スニペットを作成するバッファを用意する．  
-	  `C-x i n`  
-
-	- 既存スニペットを閲覧・編集する  
-	  `C-x i v`  
-
+- ソースツリーを表示したければ何かしら追加する．
 
 ## 参考サイト
 
