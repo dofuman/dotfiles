@@ -14,3 +14,8 @@
 	  (lambda ()
 	    (add-to-list 'company-backends '(company-jedi company-dabbrev company-yasnippet))))
 
+(require 'python)
+
+(defun tnoda/turn-on-flycheck-mode ()
+  (flycheck-mode 1))
+(add-hook 'python-mode-hook 'tnoda/turn-on-flycheck-mode)
