@@ -21,6 +21,6 @@
 (add-hook 'python-mode-hook 'tnoda/turn-on-flycheck-mode)
 
 ;;jedi-direx.el
-(eval-after-load "python"
-  '(define-key python-mode-map "\C-cx" 'jedi-direx:pop-to-buffer))
-(add-hook 'jedi-mode-hook 'jedi-direx:setup)
+;; (eval-after-load "python"
+;;   '(define-key python-mode-map "\C-cx" 'jedi-direx:pop-to-buffer))
+;; (add-hook 'jedi-mode-hook 'jedi-direx:setup)
