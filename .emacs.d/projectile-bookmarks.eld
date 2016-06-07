@@ -1,1 +1,1 @@
-("~/gitProject/Program/" "~/gitProject/dotfiles/" "/usr/share/doc/libkdtree++-dev/examples/")
+("~/gitProject/dotfiles/" "~/gitProject/Program/" "/usr/share/doc/libkdtree++-dev/examples/")
