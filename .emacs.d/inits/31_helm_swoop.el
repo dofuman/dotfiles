@@ -12,6 +12,7 @@
 (global-set-key (kbd "M-I") 'helm-swoop-back-to-last-point)
 (global-set-key (kbd "C-c M-i") 'helm-multi-swoop)
 (global-set-key (kbd "C-x M-i") 'helm-multi-swoop-all)
+;;C-c C-eで編集モード
 
 ;; isearch実行中にhelm-swoopに移行
 (define-key isearch-mode-map (kbd "M-i") 'helm-swoop-from-isearch)
