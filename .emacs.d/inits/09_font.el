@@ -9,3 +9,18 @@
  '(default ((t (:family "Ricty for Powerline" :foundry "unknown" :slant normal :weight normal :height 128 :width normal))))
  '(whitespace-tab ((t (:foreground "dark gray" :underline t :weight bold)))))
 
+;; ;; Ricty フォントの利用
+;; (create-fontset-from-ascii-font "Ricty-14:weight=normal:slant=normal" nil "ricty")
+;; (set-fontset-font "fontset-ricty"
+;;                   'unicode
+;;                   (font-spec :family "Ricty" :size 20)
+;;                   nil
+;;                   'append)
+;; (add-to-list 'default-frame-alist '(font . "fontset-ricty"))
+(add-to-list 'default-frame-alist '(font . "ricty-14"))
+(custom-set-faces
+ '(variable-pitch ((t (:family "Ricty"))))
+ '(fixed-pitch ((t (:family "Ricty"))))
+ )
+
+

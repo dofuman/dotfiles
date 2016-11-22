@@ -1,0 +1,3 @@
+[submodule "/home/dofuman/gitProject/dotfiles/.emacs.d/site-lisp/atom-one-dark-theme/"]
+	path = .emacs.d/site-lisp/atom-one-dark-theme
+	url = https://github.com/jonathanchu/atom-one-dark-theme.git
