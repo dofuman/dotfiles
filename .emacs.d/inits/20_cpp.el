@@ -61,4 +61,21 @@
 ;; helm-flycheck
 (eval-after-load 'flycheck
    '(define-key flycheck-mode-map (kbd "C-c ! h") 'helm-flycheck))
-
+(flycheck-define-checker c/c++11
+  "A C/C++ checker using g++."
+  :command ("g++" "-Wall" "-Wextra" "-std=c++11" "-ldl" source)
+  :error-patterns  ((error line-start
+                           (file-name) ":" line ":" column ":" " Error: " (message)
+                           line-end)
+                    (error line-start
+                                 (file-name) ":" line ":" column ":" " Fatal Error: " (message)
+                           line-end)
+                    (warning line-start
+                             (file-name) ":" line ":" column ":" " Warning: " (message)
+                             line-end))
+  :modes (c-mode c++-mode))
+(add-hook 'c++-mode-hook
+          '(lambda()
+             (flycheck-select-checker 'c/c++11)))
+(with-eval-after-load 'flycheck
+  (flycheck-pos-tip-mode))
