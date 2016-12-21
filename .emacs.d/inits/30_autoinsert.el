@@ -20,7 +20,7 @@
       (append '(
                 (("\\.py$" . "python template")
                  nil
-                 "#!/usr/bin/env python\n"
+                 "#!/usr/bin/env python3\n"
 				 "#-*- coding:utf-8 -*-\n"
                  "\n"
                  "import sys, os, math\n"
