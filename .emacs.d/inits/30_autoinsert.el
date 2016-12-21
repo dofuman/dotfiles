@@ -26,7 +26,7 @@
                  "import sys, os, math\n"
                  "# import numpy as np\n"
                  "# import scipy as sp\n"
-                 "# import matplotlib as plt\n"
+                 "# import matplotlib.pyplot as plt\n"
                  "\n"
 
 
