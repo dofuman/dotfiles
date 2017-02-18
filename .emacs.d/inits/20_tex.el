@@ -14,9 +14,14 @@
 	     (auto-fill-mode -1)
 	     (auto-complete-mode t)
 	     ))
-;;;(setq tex-command "latexmk -pvc")  ;;保存したら自動で再コンパイル
-(setq tex-command "latexmk")
-(setq dvi2-command "evince")
+;; YaTeX が利用する内部コマンドを定義する
+(setq tex-command "platex2pdf") ;; 自作したコマンドを
+(cond
+  ((eq system-type 'gnu/linux) ;; GNU/Linux なら
+    (setq dvi2-command "evince")) ;; evince で PDF を閲覧
+  ((eq system-type 'darwin) ;; Mac なら
+    (setq dvi2-command "open -a Preview"))) ;; プレビューで
+(add-hook 'yatex-mode-hook '(lambda () (setq auto-fill-function nil)))
 
 ;;;auto-complete latex
 (require 'auto-complete-latex)
@@ -25,33 +30,33 @@
 (add-hook 'foo-mode-hook 'ac-l-setup)
 
 (require 'platform-p)
-;; (when platform-linux-p ; for GNU/Linux
-;; ;;; inverse search
-;;   (require 'dbus)
+(when platform-linux-p ; for GNU/Linux
+;;; inverse search
+  (require 'dbus)
   
-;;   (defun un-urlify (fname-or-url)
-;; 	"A trivial function that replaces a prefix of file:/// with just /."
-;; 	(if (string= (substring fname-or-url 0 8) "file:///")
-;; 		(substring fname-or-url 7)
-;; 	  fname-or-url))
+  (defun un-urlify (fname-or-url)
+	"A trivial function that replaces a prefix of file:/// with just /."
+	(if (string= (substring fname-or-url 0 8) "file:///")
+		(substring fname-or-url 7)
+	  fname-or-url))
   
-;;   (defun evince-inverse-search (file linecol &rest ignored)
-;; 	(let* ((fname (un-urlify file))
-;; 		   (buf (find-file fname))
-;; 		   (line (car linecol))
-;; 		   (col (cadr linecol)))
-;; 	  (if (null buf)
-;; 		  (message "[Synctex]: %s is not opened..." fname)
-;; 		(switch-to-buffer buf)
-;; 		(goto-line (car linecol))
-;; 		(unless (= col -1)
-;; 		  (move-to-column col)))))
+  (defun evince-inverse-search (file linecol &rest ignored)
+	(let* ((fname (un-urlify file))
+		   (buf (find-file fname))
+		   (line (car linecol))
+		   (col (cadr linecol)))
+	  (if (null buf)
+		  (message "[Synctex]: %s is not opened..." fname)
+		(switch-to-buffer buf)
+		(goto-line (car linecol))
+		(unless (= col -1)
+		  (move-to-column col)))))
   
-;;   (dbus-register-signal
-;;    :session nil "/org/gnome/evince/Window/0"
-;;    "org.gnome.evince.Window" "SyncSource"
-;;    'evince-inverse-search)
-;;   )
+  (dbus-register-signal
+   :session nil "/org/gnome/evince/Window/0"
+   "org.gnome.evince.Window" "SyncSource"
+   'evince-inverse-search)
+  )
 
 ;;; popwin(for yatex)
 (require 'popwin-yatex)
