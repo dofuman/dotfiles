@@ -4,6 +4,8 @@
 (require 'company)
 (add-hook 'after-init-hook 'global-company-mode)
 (setq company-dabbrev-downcase nil)
+(custom-set-variables
+ '(company-global-modes '(not eshell-mode)))
 ;; (add-hook 'c++-mode-hook 'company-mode)
 ;; (add-hook 'c-mode-hook 'company-mode)
 ;; (add-hook 'python-mode-hook 'company-mode)
