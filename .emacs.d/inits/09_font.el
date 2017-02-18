@@ -17,7 +17,7 @@
 ;;                   nil
 ;;                   'append)
 ;; (add-to-list 'default-frame-alist '(font . "fontset-ricty"))
-(add-to-list 'default-frame-alist '(font . "ricty-14"))
+(add-to-list 'default-frame-alist '(font . "ricty-16"))
 (custom-set-faces
  '(variable-pitch ((t (:family "Ricty"))))
  '(fixed-pitch ((t (:family "Ricty"))))
