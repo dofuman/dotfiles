@@ -1,0 +1,26 @@
+# -*- mode: snippet -*-
+# name: cmake_template
+# key: cmake
+# --
+cmake_minimum_required(VERSION ${0:2.8.12} FATAL_ERROR)
+project(${1:PROJECT_NAME} CXX)
+
+set(CMAKE_VERBOSE_MAKEFILE ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(CMAKE_CXX_FLAGS "-std=c++11 -Wall" )
+set(CMAKE_CXX_FLAGS_DEBUG "-g")
+
+find_package(${2:PACKAGE_NAME} REQUIRED)
+
+file(GLOB PROJECT_SOURCES
+	src/*.c
+	src/*.cpp
+)
+file(GLOB PROJECT_HEADERS
+	src/*.h
+	src/*.hpp
+)
+
+include_directories(${3:src})
+add_executable(${4:PROJECT_NAME} ${5:source0} ${6:source1})
+target_link_libraries(${7:PROJECT_NAME} ${8:PACKAGE_NAME0} ${9:PACKAGE_NAME1} CMAKE_DL_LIBS)
