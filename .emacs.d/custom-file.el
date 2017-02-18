@@ -13,4 +13,10 @@
 (set-frame-parameter (selected-frame) 'alpha '(98 98))
 (add-to-list 'default-frame-alist '(alpha 98 98))
 
-
+(setq default-frame-alist
+      (append (list 
+	'(width . 166)  ;; <- ココと
+	'(height . 43)  ;; <- ココの数字
+	'(alpha . (98 98 98 98))
+	)
+	default-frame-alist))
