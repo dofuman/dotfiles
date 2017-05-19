@@ -1,6 +1,6 @@
-;; 
+;;
 ;; Markdwon mode
-;; 
+;;
 (autoload 'markdown-mode "markdown-mode"
   "Major mode for editing Markdown files" t)
 (add-to-list 'auto-mode-alist '("\\.text\\'" . gfm-mode))
@@ -14,7 +14,7 @@
   (setq markdown-command-needs-filename t)
   )
 (add-hook 'markdown-mode-hook '(lambda() (markdown-custom)))
-
+(setq markdown-enable-math t)
 ;;
 ;; mmm-mode for multiple major mode
 ;;
