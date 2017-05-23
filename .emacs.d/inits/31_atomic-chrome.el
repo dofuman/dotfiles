@@ -5,4 +5,5 @@
 
 (setq atomic-chrome-url-major-mode-alist
       '(("github\\.com" . gfm-mode)
-        ("overleaf\\.com" . yatex-mode)))
+        ("overleaf\\.com" . yatex-mode)
+		("notebooks" . python-mode)))
