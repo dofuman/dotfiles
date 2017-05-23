@@ -10,8 +10,8 @@
 
 ;; transparent background
 
-(set-frame-parameter (selected-frame) 'alpha '(30 30))
-(add-to-list 'default-frame-alist '(alpha 30 30))
+(set-frame-parameter (selected-frame) 'alpha '(90 90))
+(add-to-list 'default-frame-alist '(alpha 90 90))
 
 ;; (setq default-frame-alist
 ;;       (append (list
@@ -43,5 +43,4 @@
  '(fixed-pitch ((t (:family "Ricty"))))
  '(variable-pitch ((t (:family "Ricty"))))
  '(whitespace-tab ((t (:foreground "dark gray" :underline t :weight bold)))))
-
 
