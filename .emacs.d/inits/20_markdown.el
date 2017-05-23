@@ -6,8 +6,8 @@
 (add-to-list 'auto-mode-alist '("\\.text\\'" . gfm-mode))
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . gfm-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . gfm-mode))
-(setq markdown-open-command "mark")
-(setq markdown-preview-style "http://thomasf.github.io/solarized-css/solarized-light.min.css")
+(setq markdown-command "$HOME/.emacs.d/flavor.rb")
+;; (setq markdown-preview-style "http://thomasf.github.io/solarized-css/solarized-light.min.css")
 ;;ファイル内容を標準入力で渡すのではなく、ファイル名を引数として渡すように設定
 (defun markdown-custom ()
   "markdown-mode-hook"
