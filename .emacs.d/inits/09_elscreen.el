@@ -33,4 +33,4 @@
 ;; 手動で保存復元する際は,
 ;; 'elscreen-persist-store, elscreen-persist-restore'
 ;; を使えば良い
-(elscreen-persist-mode 1)
+;;(elscreen-persist-mode 1)

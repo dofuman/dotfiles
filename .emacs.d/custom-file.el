@@ -29,7 +29,7 @@
  '(flycheck-display-errors-function (function flycheck-pos-tip-error-messages))
  '(package-selected-packages
    (quote
-	(atomic-chrome ein elscreen-persist restart-emacs matlab-mode yasnippet web-mode volatile-highlights undo-tree swoop sublime-themes srefactor smooth-scrolling smooth-scroll smartparens shackle realgud powerline popwin pdf-tools mozc mmm-mode markdown-mode magit-gitflow jedi irony-eldoc init-loader imenus iedit ido-migemo helm-swoop helm-migemo helm-flycheck helm-company google-c-style gnuplot-mode function-args flymake-google-cpplint flymake-cursor flycheck-pos-tip flycheck-irony fcitx exec-path-from-shell elscreen descbinds-anything cuda-mode ctags-update company-jedi company-irony company-c-headers cmake-mode auto-complete-exuberant-ctags auto-complete-c-headers atom-one-dark-theme anything-exuberant-ctags)))
+	(twittering-mode atomic-chrome ein elscreen-persist restart-emacs matlab-mode yasnippet web-mode volatile-highlights undo-tree swoop sublime-themes srefactor smooth-scrolling smooth-scroll smartparens shackle realgud powerline popwin pdf-tools mozc mmm-mode markdown-mode magit-gitflow jedi irony-eldoc init-loader imenus iedit ido-migemo helm-swoop helm-migemo helm-flycheck helm-company google-c-style gnuplot-mode function-args flymake-google-cpplint flymake-cursor flycheck-pos-tip flycheck-irony fcitx exec-path-from-shell elscreen descbinds-anything cuda-mode ctags-update company-jedi company-irony company-c-headers cmake-mode auto-complete-exuberant-ctags auto-complete-c-headers atom-one-dark-theme anything-exuberant-ctags)))
  '(show-paren-mode t)
  '(tab-width 4)
  '(tool-bar-mode nil)
@@ -43,4 +43,3 @@
  '(fixed-pitch ((t (:family "Ricty"))))
  '(variable-pitch ((t (:family "Ricty"))))
  '(whitespace-tab ((t (:foreground "dark gray" :underline t :weight bold)))))
-
