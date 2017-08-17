@@ -21,3 +21,5 @@ netwark-security.data
 /.emacs.d/network-security.data
 /.emacs.d/elscreen
 /.emacs.d/request/curl-cookie-jar
+request/
+
