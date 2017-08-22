@@ -31,9 +31,13 @@
 (depends-on "yasnippet")
 
 ;; Added by me
+
+;; ...
 (depends-on "powerline")
 (depends-on "smooth-scroll")
-;;(depends-on "elscreen")
+
+;; Manage window or workspace
+(depends-on "persp-mode")
 
 ;; Auto completion
 (depends-on "company")
