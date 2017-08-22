@@ -4,6 +4,7 @@
 ;; setup
 (depends-on "init-loader")
 
+;; default elisp
 (depends-on "bind-key")
 (depends-on "cask")
 (depends-on "dash")
@@ -28,28 +29,62 @@
 (depends-on "use-package")
 (depends-on "web-mode")
 (depends-on "yasnippet")
+
+;; Added by me
 (depends-on "powerline")
 (depends-on "smooth-scroll")
-(depends-on "elscreen")
-(depends-on "elscreen-persist")
+;;(depends-on "elscreen")
+
+;; Auto completion
 (depends-on "company")
+(depends-on "auto-complete")
+
+;; Japanese input
 (depends-on "mozc")
+
+;; Edit through ssh on Emacs
 (depends-on "tramp")
+
+;; undo and redo
 (depends-on "undo-tree")
+
+;; Hightlight parts related to a certain operation
 (depends-on "volatile-highlights")
+
+;; Each language mode
 (depends-on "cmake-mode")
 (depends-on "cc-mode")
-(depends-on "irony")
-(depends-on "gud")
 (depends-on "mmm-mode")
+
+;; Improve the editing experience for the c, c++
+(depends-on "irony")
+
+;; Python auto-completion package for Emacs
 (depends-on "jedi-core")
+(depends-on "company-jedi")
+
+;; Front-end for interacting with external debuggers
+(depends-on "realgud")
+
+;; Auto insert template 
 (depends-on "autoinsert")
+
+;; Edit multiple region
 (depends-on "iedit")
+
+;; Emacs framework for completions and selections
 (depends-on "helm")
 (depends-on "helm-company")
 (depends-on "helm-flycheck")
 (depends-on "helm-swoop")
+
+;; Edit web browser input region by emacs directly
 (depends-on "atomic-chrome")
+
+;; color theme
 (depends-on "atom-one-dark-theme")
-(depends-on "auto-complete")
+
+
+;;markdown-mode
+(depends-on "markdown-mode")
 
