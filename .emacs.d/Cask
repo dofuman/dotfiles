@@ -62,6 +62,7 @@
 
 ;; Improve the editing experience for the c, c++
 (depends-on "irony")
+(depends-on "flycheck-irony")
 
 ;; Python auto-completion package for Emacs
 (depends-on "jedi-core")
