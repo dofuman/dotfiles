@@ -46,9 +46,6 @@
 ;; Japanese input
 (depends-on "mozc")
 
-;; Edit through ssh on Emacs
-(depends-on "tramp")
-
 ;; undo and redo
 (depends-on "undo-tree")
 
