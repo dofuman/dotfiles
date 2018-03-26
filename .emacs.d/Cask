@@ -60,6 +60,8 @@
 ;; Improve the editing experience for the c, c++
 (depends-on "irony")
 (depends-on "flycheck-irony")
+(depends-on "irony-eldoc")
+(depends-on "company-irony")
 
 ;; Python auto-completion package for Emacs
 (depends-on "jedi-core")

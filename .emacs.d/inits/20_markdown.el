@@ -34,3 +34,9 @@ If SUBMODE is not provided, use `LANG-mode' by default."
 (mapc 'my-mmm-markdown-auto-class
       '("awk" "bibtex" "c" "cpp" "css" "html" "latex" "lisp" "makefile"
         "markdown" "python" "r" "ruby" "sql" "stata" "xml" "bash" "sh" ))
+(add-hook 'markdown-mode-hook
+          '(lambda ()
+             (set (make-local-variable 'whitespace-action) nil)))
+(add-hook 'mmm-mode-hook
+          '(lambda ()
+             (set (make-local-variable 'whitespace-action) nil)))
