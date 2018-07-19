@@ -64,15 +64,18 @@
 ;;選択範囲の行と列を表示する
 (line-number-mode t)
 (column-number-mode t)
+
+;; emacs26 remove default-xx
 ;;選択範囲の情報表示
-(defun count-lines-and-chars ()
-  (if mark-active
-      (format "[%3d:%4d]" 
-              (count-lines (region-beginning) (region-end))
-              (- (region-end) (region-beginning)))
-    ""))
-(add-to-list 'default-mode-line-format
-             '(:eval (count-lines-and-chars)))
+;; (defun count-lines-and-chars ()
+;;   (if mark-active
+;;       (format "[%3d:%4d]"
+;;               (count-lines (region-beginning) (region-end))
+;;               (- (region-end) (region-beginning)))
+;;     ""))
+;; (add-to-list 'default-mode-line-format
+;;              '(:eval (count-lines-and-chars)))
+
 ;; smartparens
 (smartparens-global-mode)
 ;; [DEL]キーもしくは[C-h]に当てられているdelete-backward-charにadviceをかけられて削除するたびにフリーズする．これを無効化.
