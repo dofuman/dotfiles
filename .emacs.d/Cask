@@ -70,7 +70,7 @@
 ;; Front-end for interacting with external debuggers
 (depends-on "realgud")
 
-;; Auto insert template 
+;; Auto insert template
 (depends-on "autoinsert")
 
 ;; Edit multiple region
@@ -92,3 +92,5 @@
 ;;markdown-mode
 (depends-on "markdown-mode")
 
+;;elscreen
+(depends-on "elscreen")
